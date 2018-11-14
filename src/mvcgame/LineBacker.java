@@ -22,10 +22,13 @@ class LineBacker {
 
         t = 500;
         u = 50;
+        
+        // Assign location for Linebacker class ( passed to controller then view )
         position = new Rectangle(getT(), getU(), 50, 50);
 
     }
-
+    
+    // Movement functions
     public void LeftMovement() {
 
         t = (int) (t - 15);
