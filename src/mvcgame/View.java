@@ -37,40 +37,48 @@ class View {
     
     public View(){
         
+        // Create and set up initial frame
         initialFrame = new JFrame("RB Game");
         initialFrame.setSize (800, 480);
         initialFrame.setLayout(null);
         initialFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         
+        // Create and set up score panel
         scorePanel = new JPanel();
         scorePanel.setBackground(Color.yellow);
         scorePanel.setSize(800, 50);
         initialFrame.add(scorePanel);
         
+        // Create and set up buttons and labels
         startButton = new JButton("Start");
         timer1 = new JLabel("Timer: 60");
         score = new JLabel("Score: 0");
         tackles = new JLabel("Tackles: 0");
         
+        // Add labels and buttons to score panel
         scorePanel.add(startButton);
         scorePanel.add(timer1);
         scorePanel.add(tackles);
         scorePanel.add(score);
         
+        // Create and set up game panel
         gamePanel = new JPanel();
         gamePanel.setLayout(null);
         gamePanel.setBounds(0, 50, 800, 430);
         gamePanel.setBackground(Color.green);
         initialFrame.add(gamePanel);
         
+        // Create buttons for game panel
         lb1 = new JButton("lb1");
         lb2 = new JButton("lb2");
         rb = new JButton("rb");
         
+        // Create end zone panel
         endZone = new JPanel();
         endZone.setBackground(Color.white);
         initialFrame.add(endZone);
         
+        // Add buttons to score panel
         gamePanel.add(lb1);
         gamePanel.add(lb2);
         gamePanel.add(rb);
