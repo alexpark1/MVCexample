@@ -15,6 +15,7 @@ class RunningBack {
     private Rectangle position;
     private int x = 100, y = 100;
     public RunningBack(){
+        // Assign location for Runningback class ( passed to controller then view )
         position = new Rectangle(getX(), getY(), 50, 50);
     }
 
@@ -59,7 +60,8 @@ class RunningBack {
     public void setY(int y) {
         this.y = y;
     }
-
+    
+    // Movement functions
     public void LeftMovement() {
 
         x = x - 10;
